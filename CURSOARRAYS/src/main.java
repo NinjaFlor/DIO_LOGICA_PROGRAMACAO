@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class main {
 
 	public static void main(String[] args) {
 		List<String>pokemon = new ArrayList<String>();
@@ -14,7 +14,7 @@ public class Main {
 
 
 		for (String p : pokemon) {
-			System.out.printLn(p);
+			System.out.println(p);
 		}
 	}
 }
