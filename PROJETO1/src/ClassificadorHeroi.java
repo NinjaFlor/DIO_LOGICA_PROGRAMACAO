@@ -35,7 +35,7 @@ public class ClassificadorHeroi {
         String continuar;
 
         do {
-            // Entrada de dados
+            
             System.out.print("Digite o nome do herói: ");
             String nome = scanner.nextLine();
 
