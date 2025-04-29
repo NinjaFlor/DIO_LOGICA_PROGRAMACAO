@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "PROJETO1/src"
+        "PROJETO1/src",
+        "funcoes"
     ]
 }
