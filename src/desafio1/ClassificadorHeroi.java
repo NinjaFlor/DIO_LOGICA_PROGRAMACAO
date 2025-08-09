@@ -1,3 +1,7 @@
+package desafio1;
+
+import java.util.Scanner;
+
 /* Instruções para entrega
 # 1️⃣ Desafio Classificador de nível de Herói
 
@@ -26,9 +30,10 @@ Se XP for maior ou igual a 10.001 = Radiante
 Ao final deve se exibir uma mensagem:
 "O Herói de nome **{nome}** está no nível de **{nivel}**"
 */
-import java.util.Scanner;
+
 
 public class ClassificadorHeroi {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -75,7 +80,7 @@ public class ClassificadorHeroi {
             System.out.println();
         } while (continuar.equalsIgnoreCase("s"));
 
-        scanner.close();
+        
         System.out.println("Nenhum Herói informado.");
     }
 }

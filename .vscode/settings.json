@@ -1,6 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "PROJETO1/src",
-        "funcoes"
-    ]
+        "src"
+    ],
+    "java.project.outputPath": "bin"
 }
