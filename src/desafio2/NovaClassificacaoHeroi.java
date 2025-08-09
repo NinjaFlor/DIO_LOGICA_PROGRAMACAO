@@ -32,24 +32,23 @@ Ao final deve se exibir uma mensagem:
 
 
 public class NovaClassificacaoHeroi {
-    @SuppressWarnings("resource")
-    
+        
     public static String calculoNivel(int vitorias, int derrotas) {
 
         int saldo = vitorias - derrotas;
         String nivel;
 
-        if (vitorias <= 10 ){
+        if (saldo <= 10 ){
             nivel = "Ferro";
-        } else if (vitorias >= 11 && vitorias <= 20) {
+        } else if (saldo >= 11 && vitorias <= 20) {
             nivel = "Bronze";
-        } else if (vitorias >= 21 && vitorias <= 50) {
+        } else if (saldo >= 21 && vitorias <= 50) {
             nivel = "Prata";
-        } else if (vitorias >= 51 && vitorias <= 80) {
+        } else if (saldo >= 51 && vitorias <= 80) {
             nivel = "Ouro";
-        } else if (vitorias >= 81 && vitorias <= 90) {
+        } else if (saldo >= 81 && vitorias <= 90) {
             nivel = "Diamante";
-        } else if (vitorias >= 91 && vitorias <= 100) {
+        } else if (saldo >= 91 && vitorias <= 100) {
             nivel = "Lendário";
         } else {
             nivel = "Imortal";
@@ -58,18 +57,29 @@ public class NovaClassificacaoHeroi {
         return "O Herói tem saldo de " + saldo + " está no nível de " + nivel;
     }
 
+    @SuppressWarnings("resource")
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String continuar;
 
-        System.out.print("Digite o quantidade de vitórias: ");
-        int vitorias = scanner. nextInt();
+        do {
+            System.out.print("Digite o quantidade de vitórias: ");
+            int vitorias = scanner.nextInt();
 
-        System.out.print("Digite a quantidade de derrotas: ");
-        int derrotas = scanner.nextInt();
+            System.out.print("Digite a quantidade de derrotas: ");
+            int derrotas = scanner.nextInt();
+            scanner.nextLine(); 
 
-        String resultado = calculoNivel(vitorias, derrotas);
-        System.out.println(resultado);
+            String resultado = calculoNivel(vitorias, derrotas);
+            System.out.println(resultado);
+            System.out.println();
 
-       
+            System.out.print("Deseja classificar outro herói? (s/n): ");
+            continuar = scanner.nextLine();
+
+            System.out.println();
+        } while (continuar.equalsIgnoreCase("s"));
+
+        System.out.println("Nenhuma classificação realizada.");
     }
 }
